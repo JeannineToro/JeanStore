@@ -1,0 +1,21 @@
+
+/*----------  Colores de la página  ----------*/
+:root{
+    --color-fondo: #1A1D23;
+    --color-cabecera: #3498DB;
+    --color-nombre: #fff;
+}
+
+
+
+/*----------  ESTILOS CABECERA  ----------*/
+.cabecera{
+    background-color: var(--color-cabecera);
+    height: 80px;
+}
+
+.cabecera__nombre {
+    font-family: "Spicy Rice", serif;
+    color: var(--color-nombre);
+    font-size: 2.3rem;
+}  
