@@ -4,6 +4,8 @@
     --color-fondo: #1A1D23;
     --color-cabecera: #3498DB;
     --color-nombre: #fff;
+    --color-basurero: rgb(209, 3, 3);
+    --color-precio: #18722D;
 }
 
 
@@ -13,9 +15,60 @@
     background-color: var(--color-cabecera);
     height: 80px;
 }
-
-.cabecera__nombre {
+.cabecera__nombre{
     font-family: "Spicy Rice", serif;
     color: var(--color-nombre);
     font-size: 2.3rem;
-}  
+}
+
+
+
+
+/*----------  ESTILOS PRODUCTOS  ----------*/
+.productos{
+    width: 60%;
+}
+.productos__titulo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-nombre);
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.productos__contenedor{
+    height: 50vh;
+}
+.productos-card {
+    width: 200px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid var(--color-nombre);
+    overflow: hidden;
+    margin: 10px;
+}
+.productos-card__image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.productos-card__info {
+    padding: 15px;
+    text-align: center;
+}
+.productos-card__nombre {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.productos-card__precio {
+    font-weight: bold;
+    color: var(--color-precio);
+    font-size: 16px;
+}
+.productos-card__trash {
+    cursor: pointer;
+    font-size: 28px;
+    color: var(--color-basurero);
+    font-weight: bold;
+}
