@@ -98,7 +98,26 @@
             </section>
         </section>
 
-        <section class="formulario"></section>
+        <section class="formulario">
+            <h2 class="formulario__titulo">Agregar producto:</h2>
+            <form action="" class="formulario__producto" autocomplete="off">
+                <label for="nombre-producto" class="formulario__campo">Nombre:</label>
+                <input type="text" id="nombre-producto" class="formulario__input" placeholder="Ej: Súper monitor 3000">
+
+                <label for="precio-producto" class="formulario__campo">Precio:</label>
+                <input type="number" id="precio-producto" class="formulario__input" placeholder="Ej: 40.00">
+
+                <label for="imagen-producto" class="formulario__campo">Imagen:</label>
+                <input type="file" id="imagen-producto" class="formulario__input" accept="image/*">
+
+                <span class="formulario__info"><div class="signo">!</div> Debes llenar todos los campos</span>
+
+                <div class="formulario__botones">
+                    <button class="formulario__boton boton-enviar" type="submit" disabled>Enviar</button>
+                    <button class="formulario__boton boton-reset" type="reset">Limpiar</button>
+                </div>
+            </form>
+        </section>
     </main>
 </body>
 </html>

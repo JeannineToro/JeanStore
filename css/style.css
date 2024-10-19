@@ -4,8 +4,8 @@
     --color-fondo: #1A1D23;
     --color-cabecera: #3498DB;
     --color-nombre: #fff;
-    --color-basurero: rgb(209, 3, 3);
     --color-precio: #18722D;
+    --color-formulario: #216898;
 }
 
 
@@ -29,7 +29,7 @@
     width: 50%;
     margin-left: 10px;
 }
-.productos__titulo{
+.productos__titulo, .formulario__titulo{
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-nombre);
@@ -80,3 +80,88 @@
     cursor: pointer;
     width: 20px;
 }
+
+
+
+/*----------  ESTILOS FORMULARIO  ----------*/
+.formulario{
+    width: 50%;
+}
+
+.formulario__producto{
+    background-color: var(--color-nombre);
+    width: 80%;
+    height: 420px;
+    border-radius: 15px;
+}
+
+.formulario__campo{
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-formulario);
+    font-weight: bold;
+    margin-left: 15%;
+}
+
+.formulario__input[type="text"],
+.formulario__input[type="number"],
+.formulario__input[type="file"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-formulario);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--color-fondo);
+    outline: none;
+    font-weight: 550;
+}
+.formulario__input[type="number"]::-webkit-inner-spin-button{
+    display: none;
+}
+.formulario__botones{
+    width: 80%;
+    text-align: center;
+}
+.formulario__boton{
+    border: 1px solid var(--color-formulario);
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.boton-enviar{
+    color: var(--color-nombre);
+}
+.boton-enviar:disabled{
+    background-color: #216898bc;
+    cursor:not-allowed;
+
+}
+.contacto__boton:enabled:hover{
+    transition: background-color .5s ease-in-out;
+    background-color: #fff;
+    color: #000;
+}
+.boton-reset{
+    color: var(--color-formulario);
+}
+.signo{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-formulario);
+    border-radius: 50%;
+    color: var(--color-nombre);
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.formulario__info{
+    font-size: .9rem;
+    margin-bottom: 15px;
+    font-weight: 550;
+}
+

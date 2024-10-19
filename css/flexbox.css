@@ -7,6 +7,10 @@
 }
 
 
+main{
+    display: flex;
+    align-items: center;
+}
 
 /*----------  PRODUCTOS  ----------*/
 .productos__contenedor{
@@ -19,4 +23,24 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+
+/*----------  FORMULARIO  ----------*/
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario__producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formulario__campo{
+    align-self: flex-start;
+}
+
+
 
