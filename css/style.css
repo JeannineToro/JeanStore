@@ -26,18 +26,28 @@
 
 /*----------  ESTILOS PRODUCTOS  ----------*/
 .productos{
-    width: 60%;
+    width: 50%;
+    margin-left: 10px;
 }
 .productos__titulo{
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-nombre);
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 20px;
     text-align: center;
 }
 .productos__contenedor{
-    height: 50vh;
+    width: 100%;
+    height: 70vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc var(--color-fondo);
+    box-shadow: -10px 5px 15px rgba(117, 117, 117, 0.2);
+}
+/* Scrollbar personalizado (para navegadores WebKit) */
+.productos__contenedor::-webkit-scrollbar {
+    width: 8px;
 }
 .productos-card {
     width: 200px;
@@ -57,18 +67,16 @@
     text-align: center;
 }
 .productos-card__nombre {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 600;
 }
 .productos-card__precio {
     font-weight: bold;
     color: var(--color-precio);
-    font-size: 16px;
+    font-size: 20px;
 }
 .productos-card__trash {
     cursor: pointer;
-    font-size: 28px;
-    color: var(--color-basurero);
-    font-weight: bold;
+    width: 20px;
 }
