@@ -61,3 +61,18 @@ main{
 
 
 
+/*=============================================
+=            MOVIL            =
+=============================================*/
+
+@media (max-width:480px) and (min-width: 320px){
+
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+
+/*=====  End of MOVIL  ======*/
+

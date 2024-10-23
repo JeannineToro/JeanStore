@@ -4,8 +4,10 @@
     --color-fondo: #1A1D23;
     --color-cabecera: #3498DB;
     --color-nombre: #fff;
-    --color-precio: #18722D;
-    --color-formulario: #216898;
+    --color-precio: #32CD32;
+    --color-formulario: #0D1117;
+    --color-card: #22252B;
+    --color-botones: #76E2FF;
 }
 
 
@@ -43,7 +45,6 @@
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #ccc var(--color-fondo);
-    box-shadow: -10px 5px 15px rgba(117, 117, 117, 0.2);
 }
 /* Scrollbar personalizado (para navegadores WebKit) */
 .productos__contenedor::-webkit-scrollbar {
@@ -51,9 +52,10 @@
 }
 .productos-card {
     width: 195px;
-    background-color: #f8f9fa;
+    background-color: var(--color-card);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    border: 1px solid var(--color-nombre);
+    border: 1px solid #555;
     overflow: hidden;
     margin: 10px;
 }
@@ -70,6 +72,7 @@
     font-size: 14px;
     margin-bottom: 10px;
     font-weight: 600;
+    color: var(--color-nombre);
 }
 .productos-card__precio {
     font-weight: bold;
@@ -89,7 +92,7 @@
 }
 
 .formulario__producto{
-    background-color: var(--color-nombre);
+    background-color: var(--color-formulario); 
     width: 80%;
     height: 420px;
     border-radius: 15px;
@@ -98,7 +101,7 @@
 .formulario__campo{
     display: block;
     margin-bottom: 5px;
-    color: var(--color-formulario);
+    color: var(--color-nombre);
     font-weight: bold;
     margin-left: 15%;
 }
@@ -109,10 +112,10 @@
     width: 70%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid var(--color-formulario);
+    border: 1px solid var(--color-botones);
     border-radius: 4px;
     background-color: transparent;
-    color: var(--color-fondo);
+    color: var(--color-nombre);
     outline: none;
     font-weight: 550;
 }
@@ -124,7 +127,7 @@
     text-align: center;
 }
 .formulario__boton{
-    border: 1px solid var(--color-formulario);
+    border: 1px solid var(--color-botones);
     width: 30%;
     padding: 10px;
     border-radius: 5px;
@@ -132,10 +135,10 @@
     cursor: pointer;
 }
 .boton-enviar{
-    color: var(--color-nombre);
+    color: var(--color-formulario);
 }
 .boton-enviar:disabled{
-    background-color: #216898bc;
+    background-color: #9ee5f8;
     cursor:not-allowed;
 
 }
@@ -145,15 +148,15 @@
     color: #000;
 }
 .boton-reset{
-    color: var(--color-formulario);
+    color: var(--color-botones);
 }
 .signo{
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-color: var(--color-formulario);
+    background-color: var(--color-botones);
     border-radius: 50%;
-    color: var(--color-nombre);
+    color: var(--color-formulario);
     text-align: center;
     font-size: 0.7rem;
     font-weight: bold;
@@ -163,6 +166,7 @@
     font-size: .9rem;
     margin-bottom: 15px;
     font-weight: 550;
+    color: var(--color-nombre);
 }
 
 
@@ -180,3 +184,47 @@
 }
 
 
+
+
+/*=============================================
+=            Tablet            =
+=============================================*/
+
+@media (max-width:1024px) and (min-width: 768px){
+
+    .productos-card{
+        width: 150px;
+    }
+}
+
+
+/*=====  End of Tablet  ======*/
+
+
+
+
+/*=============================================
+=            MOVIL            =
+=============================================*/
+
+@media (max-width:480px) and (min-width: 320px){
+
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .formulario{
+        width: 100%;
+    }.formulario__producto{
+        width: 100%;
+    }
+    .productos{
+        width: 100%;
+    }
+    .productos-card{
+        width: 132px;
+    }
+}
+
+
+/*=====  End of MOVIL  ======*/
