@@ -1,0 +1,40 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "GrayTone Air Pro",
+            "precio": "59.99",
+            "imagen": "https://i.postimg.cc/PJ2nH72y/auriculares.webp"
+        },
+        {
+            "id": 2,
+            "nombre": "SmartTime Pro",
+            "precio": "199.99",
+            "imagen": "https://i.postimg.cc/K8gw6RXh/reloj.webp"
+        },
+        {
+            "id": 3,
+            "nombre": "Gaming Beast X1",
+            "precio": "1,499.99",
+            "imagen": "https://i.postimg.cc/c4qXKX65/pc-gamer.webp"
+        },
+        {
+            "id": 4,
+            "nombre": "Apple Watch Series 7",
+            "precio": "180.58",
+            "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
+        },
+        {
+            "id": 5,
+            "nombre": "Video game console",
+            "precio": "349.00",
+            "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
+        },
+        {
+            "id": 6,
+            "nombre": "Clickzilla",
+            "precio": "49.99",
+            "imagen": "https://i.postimg.cc/15jjT49m/mouse.webp"
+        }
+    ]
+}
