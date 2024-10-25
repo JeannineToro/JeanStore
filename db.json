@@ -1,40 +1,118 @@
 {
-    "productos": [
-        {
-            "id": 1,
-            "nombre": "GrayTone Air Pro",
-            "precio": "59.99",
-            "imagen": "https://i.postimg.cc/PJ2nH72y/auriculares.webp"
-        },
-        {
-            "id": 2,
-            "nombre": "SmartTime Pro",
-            "precio": "199.99",
-            "imagen": "https://i.postimg.cc/K8gw6RXh/reloj.webp"
-        },
-        {
-            "id": 3,
-            "nombre": "Gaming Beast X1",
-            "precio": "1,499.99",
-            "imagen": "https://i.postimg.cc/c4qXKX65/pc-gamer.webp"
-        },
-        {
-            "id": 4,
-            "nombre": "Apple Watch Series 7",
-            "precio": "180.58",
-            "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
-        },
-        {
-            "id": 5,
-            "nombre": "Video game console",
-            "precio": "349.00",
-            "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
-        },
-        {
-            "id": 6,
-            "nombre": "Clickzilla",
-            "precio": "49.99",
-            "imagen": "https://i.postimg.cc/15jjT49m/mouse.webp"
-        }
-    ]
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "GrayTone Air Pro",
+      "precio": "59.99",
+      "imagen": "https://i.postimg.cc/PJ2nH72y/auriculares.webp"
+    },
+    {
+      "id": "2",
+      "nombre": "SmartTime Pro",
+      "precio": "199.99",
+      "imagen": "https://i.postimg.cc/K8gw6RXh/reloj.webp"
+    },
+    {
+      "id": "3",
+      "nombre": "Gaming Beast X1",
+      "precio": "1,499.99",
+      "imagen": "https://i.postimg.cc/c4qXKX65/pc-gamer.webp"
+    },
+    {
+      "id": "4",
+      "nombre": "Apple Watch Series 7",
+      "precio": "180.58",
+      "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
+    },
+    {
+      "id": "5",
+      "nombre": "Video game console",
+      "precio": "349.00",
+      "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
+    },
+    {
+      "id": "6",
+      "nombre": "Clickzilla",
+      "precio": "49.99",
+      "imagen": "https://i.postimg.cc/15jjT49m/mouse.webp"
+    },
+    {
+      "id": "19d0",
+      "nombre": "Prueba",
+      "precio": "50",
+      "imagen": "https://i.postimg.cc/15jjT49m/mouse.webp"
+    },
+    {
+      "id": "c423",
+      "nombre": "prueba 2",
+      "precio": "32.00",
+      "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
+    },
+    {
+      "id": "e899",
+      "nombre": "prueba 3",
+      "precio": "100.00",
+      "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
+    },
+    {
+      "id": "7c12",
+      "nombre": "prueba 4",
+      "precio": "20.87",
+      "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
+    },
+    {
+      "id": "75a2",
+      "nombre": "prueba 5",
+      "precio": "20.99",
+      "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
+    },
+    {
+      "id": "44a4",
+      "nombre": "prueba 5",
+      "precio": "34.4",
+      "imagen": "https://i.postimg.cc/15jjT49m/mouse.webp"
+    },
+    {
+      "id": "ad14",
+      "nombre": "prueba 6",
+      "precio": "12.98",
+      "imagen": "https://i.postimg.cc/c4qXKX65/pc-gamer.webp"
+    },
+    {
+      "id": "ac23",
+      "nombre": "prueba 7",
+      "precio": "87",
+      "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
+    },
+    {
+      "id": "5252",
+      "nombre": "prueba 8",
+      "precio": "34.90",
+      "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
+    },
+    {
+      "id": "1799",
+      "nombre": "prueba 9",
+      "precio": "89",
+      "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
+    },
+    {
+      "id": "6a56",
+      "nombre": "prueba 10",
+      "precio": "78.90",
+      "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
+    },
+    {
+      "id": "768f",
+      "nombre": "prueba 11",
+      "precio": "89.7",
+      "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
+    },
+    {
+      "id": "d3f2",
+      "nombre": "prueba 12",
+      "precio": "33",
+      "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
+    }
+  ]
 }

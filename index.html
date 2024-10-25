@@ -100,20 +100,22 @@
 
         <section class="formulario">
             <h2 class="formulario__titulo">Agregar producto:</h2>
-            <form action="" class="formulario__producto" autocomplete="off">
+            <form class="formulario__producto" autocomplete="off" data-formulario>
+
+                <p id="mensaje-exito" style="display:none; color: rgb(61, 255, 61);">¡Registro exitoso!</p>
                 <label for="nombre-producto" class="formulario__campo">Nombre:</label>
-                <input type="text" id="nombre-producto" class="formulario__input" placeholder="Ej: Súper monitor 3000">
+                <input type="text" id="nombre-producto" class="formulario__input" placeholder="Ej: Súper monitor 3000" data-nombre>
 
                 <label for="precio-producto" class="formulario__campo">Precio:</label>
-                <input type="number" id="precio-producto" class="formulario__input" placeholder="Ej: 40.00">
+                <input type="text" id="precio-producto" class="formulario__input" placeholder="Ej: 40.00" data-precio>
 
-                <label for="imagen-producto" class="formulario__campo">Imagen:</label>
-                <input type="file" id="imagen-producto" class="formulario__input" accept="image/*">
+                <label for="imagen-producto" class="formulario__campo">Imagen (URL):</label>
+                <input type="text" id="imagen-producto" class="formulario__input" placeholder="Ej: https://i.postimg.cc/15jjT49m/mouse.webp" data-imagen>
 
                 <span class="formulario__info"><div class="signo">!</div> Debes llenar todos los campos</span>
 
                 <div class="formulario__botones">
-                    <button class="formulario__boton boton-enviar" type="submit" disabled>Enviar</button>
+                    <button class="formulario__boton boton-enviar" id="boton-enviar" type="submit" disabled>Enviar</button>
                     <button class="formulario__boton boton-reset" type="reset">Limpiar</button>
                 </div>
             </form>
@@ -132,5 +134,6 @@
     </footer>
 
     <script type="module" src="/js/mostrarProductos.js"></script>
+    <script type="module" src="/js/registrarProducto.js"></script>
 </body>
 </html>

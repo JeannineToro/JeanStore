@@ -134,18 +134,18 @@
     font-weight: bold;
     cursor: pointer;
 }
-.boton-enviar{
+#boton-enviar{
     color: var(--color-formulario);
 }
-.boton-enviar:disabled{
-    background-color: #9ee5f8;
+#boton-enviar:disabled{
+    background-color: #b9ecfa;
     cursor:not-allowed;
 
 }
-.contacto__boton:enabled:hover{
+#boton-enviar:enabled{
     transition: background-color .5s ease-in-out;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-botones);
+    color: var(--color-formulario);
 }
 .boton-reset{
     color: var(--color-botones);

@@ -3,7 +3,6 @@ import { conexionApi } from "./conexionApi.js";
 const lista = document.querySelector("[data-lista]");
 
 export default function crearCard(nombre,precio,imagen){
-
     const producto = document.createElement("li");
 
     producto.className = "productos-card";
@@ -19,8 +18,10 @@ export default function crearCard(nombre,precio,imagen){
     return producto;
 }
 
+
 async function listarProductos() {
-    const listaAPI = await conexionApi.listarProductos();
+    const listaAPI = await conexionApi.productos();
+    lista.innerHTML = '';
     listaAPI.forEach(producto => lista.appendChild(crearCard(producto.nombre,producto.precio,producto.imagen)));
 }
 
