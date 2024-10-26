@@ -22,7 +22,19 @@ async function registrarProducto(nombre,precio,imagen) {
     return conexionConvertida;
 }
 
+
+async function eliminarProducto(id) {
+    const conexion = await fetch(`http://localhost:3000/productos/${id}`, {
+        method: 'DELETE'
+    });
+
+    if (!conexion.ok) {
+        throw new Error("Error al eliminar el producto");
+    }
+}
+
 export const conexionApi={
     productos,
-    registrarProducto
+    registrarProducto,
+    eliminarProducto
 }

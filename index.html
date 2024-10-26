@@ -39,62 +39,44 @@
                             <button aria-label="Eliminar producto del carrito" class="productos-card__trash"><img src="/img/trash.png" alt="icono de cesto de basura"></button>
                         </div>
                     </div>
-                </li>
-
-                <li class="productos-card" role="region">
-                    <img src="https://i.postimg.cc/K8gw6RXh/reloj.webp" alt="Imagen del producto: SmartTime Pro" class="product-card__image" aria-describedby="productos-card__descripcion">
-                    <div class="productos-card__info">
-                        <h2 class="productos-card__nombre">SmartTime Pro</h2>
-                        <div class="productos-card__bottom">
-                            <span class="productos-card__precio">$199.99</span>
-                            <button aria-label="Eliminar producto del carrito" class="productos-card__trash"><img src="/img/trash.png" alt="icono de cesto de basura"></button>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="productos-card" role="region">
-                    <img src="https://i.postimg.cc/c4qXKX65/pc-gamer.webp" alt="Imagen del producto: Gaming Beast X1" class="product-card__image" aria-describedby="productos-card__descripcion">
-                    <div class="productos-card__info">
-                        <h2 class="productos-card__nombre">Gaming Beast X1</h2>
-                        <div class="productos-card__bottom">
-                            <span class="productos-card__precio">$1,499.99</span>
-                            <button aria-label="Eliminar producto del carrito" class="productos-card__trash"><img src="/img/trash.png" alt="icono de cesto de basura"></button>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="productos-card" role="region">
-                    <img src="https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp" alt="Imagen del producto: Apple Watch Series" class="product-card__image" aria-describedby="productos-card__descripcion">
-                    <div class="productos-card__info">
-                        <h2 class="productos-card__nombre">Apple Watch Series 7</h2>
-                        <div class="productos-card__bottom">
-                            <span class="productos-card__precio">$180.58</span>
-                            <button aria-label="Eliminar producto del carrito" class="productos-card__trash"><img src="/img/trash.png" alt="icono de cesto de basura"></button>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="productos-card" role="region">
-                    <img src="https://i.postimg.cc/j5t1jXWF/consola.webp" alt="Imagen del producto: Video Game Console" class="product-card__image" aria-describedby="productos-card__descripcion">
-                    <div class="productos-card__info">
-                        <h2 class="productos-card__nombre">Video game console</h2>
-                        <div class="productos-card__bottom">
-                            <span class="productos-card__precio">$349.00</span>
-                            <button aria-label="Eliminar producto del carrito" class="productos-card__trash"><img src="/img/trash.png" alt="icono de cesto de basura"></button>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="productos-card" role="region">
-                    <img src="https://i.postimg.cc/15jjT49m/mouse.webp" alt="Imagen del producto: Clickzilla" class="product-card__image" aria-describedby="productos-card__descripcion">
-                    <div class="productos-card__info">
-                        <h2 class="productos-card__nombre">Clickzilla</h2>
-                        <div class="productos-card__bottom">
-                            <span class="productos-card__precio">$49.99</span>
-                            <button aria-label="Eliminar producto del carrito" class="productos-card__trash"><img src="/img/trash.png" alt="icono de cesto de basura"></button>
-                        </div>
-                    </div>
                 </li> -->
+
+                <!-- {
+                    "id": "5f7b",
+                    "nombre": "GrayTone Air Pro",
+                    "precio": "59.99",
+                    "imagen": "https://i.postimg.cc/PJ2nH72y/auriculares.webp"
+                  },
+                  {
+                    "id": "9633",
+                    "nombre": "Reloj Talvox",
+                    "precio": "17.84",
+                    "imagen": "https://i.postimg.cc/K8gw6RXh/reloj.webp"
+                  },
+                  {
+                    "id": "06d2",
+                    "nombre": "PC Gamer",
+                    "precio": "217.80",
+                    "imagen": "https://i.postimg.cc/c4qXKX65/pc-gamer.webp"
+                  },
+                  {
+                    "id": "9eae",
+                    "nombre": "Reloj Suce",
+                    "precio": "35.99",
+                    "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
+                  },
+                  {
+                    "id": "ab6a",
+                    "nombre": "Console Geek",
+                    "precio": "650.89",
+                    "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
+                  },
+                  {
+                    "id": "22d0",
+                    "nombre": "ClickZilla",
+                    "precio": "28.74",
+                    "imagen": "https://i.postimg.cc/15jjT49m/mouse.webp"
+                  } -->
             </ul>
         </section>
 
@@ -121,6 +103,14 @@
             </form>
         </section>
     </main>
+
+    <div id="modal-confirmacion" class="modal">
+        <div class="modal-contenido">
+            <h2>¿Estás seguro de que deseas eliminar este producto?</h2>
+            <button id="confirmar-eliminacion" class="btn-confirmar">Eliminar</button>
+            <button id="cancelar-eliminacion" class="btn-cancelar">Cancelar</button>
+        </div>
+    </div>
 
     <footer class="rodapie">
         <div class="rodapie__logo">
