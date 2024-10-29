@@ -4,6 +4,7 @@ const lista = document.querySelector("[data-lista]");
 const modal = document.getElementById("modal-confirmacion");
 const confirmarEliminacionBtn = document.getElementById("confirmar-eliminacion");
 const cancelarEliminacionBtn = document.getElementById("cancelar-eliminacion");
+const page = document.querySelector("main");
 
 
 async function eliminarProducto(id, producto) {
@@ -65,4 +66,17 @@ async function listarProductos() {
     listaAPI.forEach(producto => lista.appendChild(crearCard(producto.id,producto.nombre,producto.precio,producto.imagen)));
 }
 
-document.addEventListener("DOMContentLoaded", listarProductos);
+document.addEventListener("DOMContentLoaded", async () => {
+    await listarProductos();
+});
+
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = 0; // Inicia la transición de desvanecimiento
+
+  // Después de la transición, oculta completamente el preloader
+setTimeout(() => {
+    preloader.style.display = "none";
+    page.style.visibility = "visible";
+  }, 500); // Ajusta el tiempo según la duración de la transición
+});

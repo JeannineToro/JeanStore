@@ -18,6 +18,16 @@
     <link rel="icon" href="/img/logo.png" type="image/x-icon">
 </head>
 <body>
+
+    <!--Preloader-->
+    <div id="preloader" class="preloader">
+        <div class="preloader__puntos">
+            <span class="preloader__punto"></span>
+            <span class="preloader__punto"></span>
+            <span class="preloader__punto"></span>
+            <span class="preloader__punto"></span>
+        </div>
+    </div>
     
     <!-- Cabecera -->
     <header class="cabecera">
@@ -83,8 +93,7 @@
         <section class="formulario">
             <h2 class="formulario__titulo">Agregar producto:</h2>
             <form class="formulario__producto" autocomplete="off" data-formulario>
-
-                <p id="mensaje-exito" style="display:none; color: rgb(61, 255, 61);">¡Registro exitoso!</p>
+                
                 <label for="nombre-producto" class="formulario__campo">Nombre:</label>
                 <input type="text" id="nombre-producto" class="formulario__input" placeholder="Ej: Súper monitor 3000" data-nombre>
 
@@ -118,7 +127,7 @@
             <p class="logo__nombre">JeannStore</p>
         </div>
 
-        <p class="rodapie__autor">DESARROLLADO POR JEANNINE TORO</p>
+        <p class="rodapie__autor">Desarrollado por Jeannine Toro</p>
 
         <p class="rodapie__empresa">ALURA LATAM - 2024</p>
     </footer>

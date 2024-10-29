@@ -5,7 +5,6 @@ const inputNombre = document.querySelector("[data-nombre]");
 const inputPrecio = document.querySelector("[data-precio]");
 const inputImagen = document.querySelector("[data-imagen]");
 const botonEnviar = document.getElementById("boton-enviar");
-const mensajeExito = document.getElementById("mensaje-exito");
 
 // Inicialmente, el botón de enviar está deshabilitado
 botonEnviar.disabled = true;
@@ -51,11 +50,6 @@ async function crearProducto(evento) {
         // Llamada a la API para registrar el producto
         await conexionApi.registrarProducto(nombre, precio, imagen);
 
-        // Mostrar mensaje de éxito
-        mensajeExito.style.display = 'block'; // Mostramos el mensaje de éxito
-        mensajeExito.textContent = "¡Registro exitoso!";
-        mensajeExito.style.color = 'green'; // Establecer el color de éxito
-
         // Limpiar el formulario después del registro exitoso
         formulario.reset();
 
@@ -64,9 +58,7 @@ async function crearProducto(evento) {
 
     } catch (error) {
         // Mostrar mensaje de error en caso de que falle
-        mensajeExito.style.display = 'block';
-        mensajeExito.style.color = 'red';
-        mensajeExito.textContent = "Error al registrar el producto. Inténtelo de nuevo.";
+        alert(error);
     }
 }
 
