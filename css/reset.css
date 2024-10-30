@@ -27,6 +27,9 @@ body {
 	line-height: 1;
     font-family: 'Quicksand', sans-serif;
 	background-color: var(--color-fondo);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 ol, ul {
 	list-style: none;

@@ -94,6 +94,11 @@ main{
     width: 50%;
     margin-left: 10px;
 }
+.productos__mensaje{
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--color-nombre);
+}
 .productos__titulo, .formulario__titulo{
     font-size: 1.5rem;
     font-weight: bold;
@@ -314,6 +319,16 @@ main{
     .productos-card__precio{
         font-size: 1.1rem;
     }
+    .rodapie{
+        margin-top: auto;
+    }
+    .productos-card{
+        width: 160px;
+        height: 260px;
+    }
+    .productos-card__precio{
+        font-size: 1rem;
+    }
 }
 
 
@@ -339,6 +354,13 @@ main{
     }
     .productos{
         width: 100%;
+        margin-top: 100px;
+    }
+    .productos-card{
+        width: 160px;
+    }
+    .productos-card__precio{
+        font-size: .9rem;
     }
 }
 

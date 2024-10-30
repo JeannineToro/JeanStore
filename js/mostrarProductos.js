@@ -1,6 +1,7 @@
 import { conexionApi } from "./conexionApi.js";
 
 const lista = document.querySelector("[data-lista]");
+const seccionProductos = document.querySelector("[data-seccionProductos]");
 const modal = document.getElementById("modal-confirmacion");
 const confirmarEliminacionBtn = document.getElementById("confirmar-eliminacion");
 const cancelarEliminacionBtn = document.getElementById("cancelar-eliminacion");
@@ -63,7 +64,12 @@ export default function crearCard(id,nombre,precio,imagen){
 async function listarProductos() {
     const listaAPI = await conexionApi.productos();
     lista.innerHTML = '';
-    listaAPI.forEach(producto => lista.appendChild(crearCard(producto.id,producto.nombre,producto.precio,producto.imagen)));
+
+    if (listaAPI.length === 0) {
+        seccionProductos.innerHTML = '<p class="productos__mensaje">No se han agregado productos</p>'
+    }else{
+        listaAPI.forEach(producto => lista.appendChild(crearCard(producto.id,producto.nombre,producto.precio,producto.imagen)));
+    }
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
