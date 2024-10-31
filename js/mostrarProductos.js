@@ -1,7 +1,6 @@
 import { conexionApi } from "./conexionApi.js";
+import mostrarMensaje from "./mensajeError.js";
 
-const lista = document.querySelector("[data-lista]");
-const seccionProductos = document.querySelector("[data-seccionProductos]");
 const modal = document.getElementById("modal-confirmacion");
 const confirmarEliminacionBtn = document.getElementById("confirmar-eliminacion");
 const cancelarEliminacionBtn = document.getElementById("cancelar-eliminacion");
@@ -19,7 +18,7 @@ async function eliminarProducto(id, producto) {
                 producto.remove();
                 resolve();
             } catch (error) {
-                console.error("Error al eliminar el producto:", error);
+                mostrarMensaje("Error al eliminar el producto:" + error);
                 reject();
             } finally {
                 modal.style.display = "none"; // Oculta el modal
@@ -52,29 +51,16 @@ export default function crearCard(id,nombre,precio,imagen){
     const botonEliminar = producto.querySelector(".productos-card__trash");
     if (botonEliminar) {
         botonEliminar.addEventListener("click", async () => {
-            await eliminarProducto(id, producto);
+            try {
+                await eliminarProducto(id, producto);
+            } catch (error) {
+                console.log("Se canceló la eliminación del producto");
+            }
         });
-}
-
+    }
 
     return producto;
 }
-
-
-async function listarProductos() {
-    const listaAPI = await conexionApi.productos();
-    lista.innerHTML = '';
-
-    if (listaAPI.length === 0) {
-        seccionProductos.innerHTML = '<p class="productos__mensaje">No se han agregado productos</p>'
-    }else{
-        listaAPI.forEach(producto => lista.appendChild(crearCard(producto.id,producto.nombre,producto.precio,producto.imagen)));
-    }
-}
-
-document.addEventListener("DOMContentLoaded", async () => {
-    await listarProductos();
-});
 
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
