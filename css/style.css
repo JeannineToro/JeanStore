@@ -359,6 +359,9 @@ main{
     .productos-card__precio{
         font-size: 1rem;
     }
+    .productos-card__nombre{
+        height: 30px;
+    }
 }
 
 
@@ -394,6 +397,9 @@ main{
     }
     .productos-card__precio{
         font-size: .9rem;
+    }
+    .productos-card__nombre{
+        height: 40px;
     }
 }
 
