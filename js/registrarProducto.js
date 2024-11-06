@@ -41,16 +41,20 @@ inputPrecio.addEventListener('input', function(event) {
 });
 
 
-async function listarProductos() {
+export async function listarProductos() {
     try {
         lista.innerHTML = ""; // Limpiamos la lista actual
 
         // Obtenemos los productos de la API y los mostramos en el DOM
         const listaAPI = await conexionApi.productos();
         if (listaAPI.length === 0) {
-            seccionProductos.innerHTML = '<p class="productos__mensaje">Aún no se han agregado productos</p>';
+            lista.classList.add('vacio');
+            lista.innerHTML = '<li class="productos__mensaje">Aún no se han agregado productos</li>';
         } else {
-            seccionProductos.querySelector(".productos__mensaje")?.remove();
+            // seccionProductos.querySelector(".productos__mensaje")?.remove();
+            if (lista.classList.contains('vacio')) {
+                lista.classList.remove('vacio');
+            }
             listaAPI.forEach(producto => {
                 lista.appendChild(crearCard(producto.id, producto.nombre, producto.precio, producto.imagen));
             });
@@ -73,6 +77,8 @@ async function crearProducto(evento) {
 
         // Agregamos el nuevo producto al DOM sin recargar la lista completa
         lista.appendChild(crearCard(nuevoProducto.id, nombre, precio, imagen));
+
+        listarProductos();
 
         // Limpia los campos del formulario
         evento.target.reset();

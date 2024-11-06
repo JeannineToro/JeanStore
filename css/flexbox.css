@@ -18,6 +18,11 @@ main{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+.vacio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .productos-card__bottom{
     display: flex;
     justify-content: space-between;

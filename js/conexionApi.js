@@ -1,4 +1,5 @@
 import mostrarMensaje from "./mensajeError.js";
+import { listarProductos } from "./registrarProducto.js";
 
 const urlAPI = 'https://6722a06c2108960b9cc50d18.mockapi.io/api/v1/Productos';
 

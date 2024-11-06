@@ -1,5 +1,6 @@
 import { conexionApi } from "./conexionApi.js";
 import mostrarMensaje from "./mensajeError.js";
+import { listarProductos } from "./registrarProducto.js";
 
 const modal = document.getElementById("modal-confirmacion");
 const confirmarEliminacionBtn = document.getElementById("confirmar-eliminacion");
@@ -53,6 +54,7 @@ export default function crearCard(id,nombre,precio,imagen){
         botonEliminar.addEventListener("click", async () => {
             try {
                 await eliminarProducto(id, producto);
+                listarProductos();
             } catch (error) {
                 console.log("Se canceló la eliminación del producto");
             }
