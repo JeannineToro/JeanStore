@@ -183,7 +183,25 @@ main{
     cursor: pointer;
     width: 20px;
 }
-
+.productos__buscar{
+    width: 250px;
+    height: 30px;
+    margin: 30px auto;
+}
+.buscar__input{
+    width: 85%;
+    height: 100%;
+    border-radius: 8px 0px 0px 8px;
+    outline: none;
+    font-weight: 600;
+}
+.buscar__boton{
+    background-color: rgb(99, 138, 207);
+    padding: 4.5px 8px;
+    position: absolute;
+    border-radius: 0px 8px 8px 0px;
+    cursor: pointer;
+}
 
 
 /*----------  ESTILOS FORMULARIO  ----------*/

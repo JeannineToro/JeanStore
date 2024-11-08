@@ -1,5 +1,4 @@
 import mostrarMensaje from "./mensajeError.js";
-import { listarProductos } from "./registrarProducto.js";
 
 const urlAPI = 'https://6722a06c2108960b9cc50d18.mockapi.io/api/v1/Productos';
 
@@ -46,8 +45,25 @@ async function eliminarProducto(id) {
     }
 }
 
+async function buscarProducto(palabraClave) {
+
+    try{
+        const conexion = await fetch(urlAPI + `?nombre=${palabraClave}`);
+
+        if (!conexion.ok) {
+            throw new Error("No existe el producto");
+        }
+
+        const conexionConvertida = await conexion.json();
+        return conexionConvertida;
+    }catch(error){
+        console.error(error);
+    }
+}
+
 export const conexionApi={
     productos,
     registrarProducto,
-    eliminarProducto
+    eliminarProducto,
+    buscarProducto
 }

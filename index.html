@@ -41,7 +41,10 @@
         <section class="productos" data-seccionProductos>
             <h1 class="productos__titulo">Mis productos:</h1>
 
-            <!-- <p class="noProductos">No se han agregado productos aún.</p> -->
+            <div class="productos__buscar">
+              <input type="search" placeholder="Buscar" id="buscar" class="buscar__input" data-busqueda autocomplete="off">
+              <button class="buscar__boton" data-botonBusqueda>&#128269;</button>
+            </div>
             <ul class="productos__contenedor" data-lista>
                 <!-- {
                     "id": "5f7b",
@@ -126,6 +129,7 @@
 
     <script type="module" src="/js/mostrarProductos.js"></script>
     <script type="module" src="/js/registrarProducto.js"></script>
+    <script type="module" src="/js/buscarProducto.js"></script>
 </body>
 </html>
 

@@ -13,6 +13,11 @@ main{
 }
 
 /*----------  PRODUCTOS  ----------*/
+.productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .productos__contenedor{
     display: flex;
     flex-wrap: wrap;

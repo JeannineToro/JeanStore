@@ -51,7 +51,6 @@ export async function listarProductos() {
             lista.classList.add('vacio');
             lista.innerHTML = '<li class="productos__mensaje">Aún no se han agregado productos</li>';
         } else {
-            // seccionProductos.querySelector(".productos__mensaje")?.remove();
             if (lista.classList.contains('vacio')) {
                 lista.classList.remove('vacio');
             }
