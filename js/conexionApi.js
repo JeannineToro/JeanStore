@@ -1,7 +1,10 @@
+//Importaciones
 import mostrarMensaje from "./mensajeError.js";
 
+//Enlace de la API
 const urlAPI = 'https://6722a06c2108960b9cc50d18.mockapi.io/api/v1/Productos';
 
+//Se obtienen los productos
 async function productos() {
     const conexion = await fetch(urlAPI);
     const conexionConvertida = await conexion.json();
@@ -9,7 +12,7 @@ async function productos() {
     return conexionConvertida;
 }
 
-
+//Método POST para registrar productos
 async function registrarProducto(nombre,precio,imagen) {
     try {
         const conexion = await fetch(urlAPI, {
@@ -26,7 +29,7 @@ async function registrarProducto(nombre,precio,imagen) {
     }
 }
 
-
+//Método DELETE para eliminar productos
 async function eliminarProducto(id) {
     try {
         const conexion = await fetch(urlAPI + `/${id}`, {
@@ -45,6 +48,7 @@ async function eliminarProducto(id) {
     }
 }
 
+//Búsqueda de productos por nombre a la API
 async function buscarProducto(palabraClave) {
 
     try{
@@ -61,6 +65,7 @@ async function buscarProducto(palabraClave) {
     }
 }
 
+//Se exportan todas las funciones
 export const conexionApi={
     productos,
     registrarProducto,

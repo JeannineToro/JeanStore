@@ -82,8 +82,8 @@ main{
     top: 95px;
     right: 280px;
     padding: 15px;
-    background-color: #f8d7da; /* Fondo para mensaje de error */
-    color: #721c24; /* Texto rojo para mensaje de error */
+    background-color: #f8d7da;
+    color: #721c24;
     border: 1px solid #f5c6cb;
     border-radius: 5px;
     z-index: 1000;
@@ -92,8 +92,8 @@ main{
 }
 
 .popup-mensaje.exito {
-    background-color: #d4edda; /* Fondo para mensaje de éxito */
-    color: #155724; /* Texto verde para mensaje de éxito */
+    background-color: #d4edda;
+    color: #155724;
     border: 1px solid #c3e6cb;
 }
 
@@ -305,15 +305,14 @@ main{
 
 
 /*----------  MODAL  ----------*/
-/* Estilos del modal */
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -420,6 +419,4 @@ main{
         height: 40px;
     }
 }
-
-
 /*=====  End of MOVIL  ======*/

@@ -1,13 +1,15 @@
+//Importaciones
 import { conexionApi } from "./conexionApi.js";
 import mostrarMensaje from "./mensajeError.js";
 import { listarProductos } from "./registrarProducto.js";
 
+//Obtenemos los elementos del DOM
 const modal = document.getElementById("modal-confirmacion");
 const confirmarEliminacionBtn = document.getElementById("confirmar-eliminacion");
 const cancelarEliminacionBtn = document.getElementById("cancelar-eliminacion");
 const page = document.querySelector("main");
 
-
+//Función para eliminar productos
 async function eliminarProducto(id, producto) {
     modal.style.display = "flex"; // Muestra el modal
 
@@ -33,10 +35,13 @@ async function eliminarProducto(id, producto) {
     });
 }
 
+//Función que crea la card para cada producto
 export default function crearCard(id,nombre,precio,imagen){
-    const producto = document.createElement("li");
+    const producto = document.createElement("li"); // Se crea un elemento li
 
+    //Se agrega la clase a cada elemento li
     producto.className = "productos-card";
+    //Se agrega el contenido de cada card
     producto.innerHTML = `<img src="${imagen}" alt="Imagen del producto: ${nombre}" class="product-card__image" aria-describedby="productos-card__descripcion">
                     <div class="productos-card__info">
                         <h2 class="productos-card__nombre">${nombre}</h2>
@@ -64,6 +69,7 @@ export default function crearCard(id,nombre,precio,imagen){
     return producto;
 }
 
+//Preloader
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
     preloader.style.opacity = 0; // Inicia la transición de desvanecimiento

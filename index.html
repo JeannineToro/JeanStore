@@ -1,190 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Estilos de la página-->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/flexbox.css">
+    <!--Fuentes de la página-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Spicy+Rice&display=swap" rel="stylesheet">
-    <title>JeanStore</title>
+    <!--Nombre de la página-->
+    <title>JeannStore</title>
 
     <!-- Icono de la pestaña -->
     <link rel="icon" href="/img/logo.png" type="image/x-icon">
-</head>
-<body>
+  </head>
+
+  <body>
 
     <!--Preloader-->
     <div id="preloader" class="preloader">
-        <div class="preloader__puntos">
-            <span class="preloader__punto"></span>
-            <span class="preloader__punto"></span>
-            <span class="preloader__punto"></span>
-            <span class="preloader__punto"></span>
-        </div>
+      <div class="preloader__puntos">
+        <span class="preloader__punto"></span>
+        <span class="preloader__punto"></span>
+        <span class="preloader__punto"></span>
+        <span class="preloader__punto"></span>
+      </div>
     </div>
 
+    <!--POPUP con mensaje de éxito o error-->
     <div id="mensaje-popup" class="popup-mensaje"></div>
     
     <!-- Cabecera -->
     <header class="cabecera">
-        <img class="logo__img" src="/img/logo.png" alt="Logo" height="65px">
-        <p class="logo__nombre">JeannStore</p>
+      <!--Logo de la página-->
+      <img class="logo__img" src="/img/logo.png" alt="Logo" height="65px">
+      <!--Nombre de la página-->
+      <p class="logo__nombre">JeannStore</p>
     </header>
 
+    <!--Contenido principal de la página-->
     <main>
-        <section class="productos" data-seccionProductos>
-            <h1 class="productos__titulo">Mis productos:</h1>
-
-            <div class="productos__buscar">
-              <input type="search" placeholder="Buscar" id="buscar" class="buscar__input" data-busqueda autocomplete="off">
-              <button class="buscar__boton" data-botonBusqueda>&#128269;</button>
-            </div>
-            <ul class="productos__contenedor" data-lista>
-                <!-- {
-                    "id": "5f7b",
-                    "nombre": "GrayTone Air Pro",
-                    "precio": "59.99",
-                    "imagen": "https://i.postimg.cc/PJ2nH72y/auriculares.webp"
-                  },
-                  {
-                    "id": "9633",
-                    "nombre": "Reloj Talvox",
-                    "precio": "17.84",
-                    "imagen": "https://i.postimg.cc/K8gw6RXh/reloj.webp"
-                  },
-                  {
-                    "id": "06d2",
-                    "nombre": "PC Gamer",
-                    "precio": "217.80",
-                    "imagen": "https://i.postimg.cc/c4qXKX65/pc-gamer.webp"
-                  },
-                  {
-                    "id": "9eae",
-                    "nombre": "Reloj Suce",
-                    "precio": "35.99",
-                    "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
-                  },
-                  {
-                    "id": "ab6a",
-                    "nombre": "Console Geek",
-                    "precio": "650.89",
-                    "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
-                  },
-                  {
-                    "id": "22d0",
-                    "nombre": "ClickZilla",
-                    "precio": "28.74",
-                    "imagen": "https://i.postimg.cc/15jjT49m/mouse.webp"
-                  } -->
-            </ul>
-        </section>
-
-        <section class="formulario">
-            <h2 class="formulario__titulo">Agregar producto:</h2>
-            <form class="formulario__producto" autocomplete="off" data-formulario>
-                
-                <label for="nombre-producto" class="formulario__campo">Nombre:</label>
-                <input type="text" id="nombre-producto" class="formulario__input" placeholder="Ej: Súper monitor 3000" data-nombre>
-
-                <label for="precio-producto" class="formulario__campo">Precio:</label>
-                <input type="text" id="precio-producto" class="formulario__input" placeholder="Ej: 40.00" data-precio>
-
-                <label for="imagen-producto" class="formulario__campo">Imagen (URL):</label>
-                <input type="text" id="imagen-producto" class="formulario__input" placeholder="Ej: https://i.postimg.cc/15jjT49m/mouse.webp" data-imagen>
-
-                <span class="formulario__info"><div class="signo">!</div> Debes llenar todos los campos</span>
-
-                <div class="formulario__botones">
-                    <button class="formulario__boton boton-enviar" id="boton-enviar" type="submit" disabled>Enviar</button>
-                    <button class="formulario__boton boton-reset" type="reset">Limpiar</button>
-                </div>
-            </form>
-        </section>
+      <!--Contenedor de productos-->
+      <section class="productos" data-seccionProductos>
+        <h1 class="productos__titulo">Mis productos:</h1>
+        <!--Buscador-->
+        <div class="productos__buscar">
+          <input type="search" placeholder="Buscar" id="buscar" class="buscar__input" data-busqueda autocomplete="off">
+          <button class="buscar__boton" data-botonBusqueda>&#128269;</button>
+        </div>
+        <!--Lista donde se cargarán los productos registrados en la API-->
+        <ul class="productos__contenedor" data-lista></ul>
+      </section>
+      <!--Contenedor de formulario-->
+      <section class="formulario">
+        <h2 class="formulario__titulo">Agregar producto:</h2>
+        <!--Formulario-->
+        <form class="formulario__producto" autocomplete="off" data-formulario>
+          <!--Campos del formulario-->
+          <label for="nombre-producto" class="formulario__campo">Nombre:</label>
+          <input type="text" id="nombre-producto" class="formulario__input" placeholder="Ej: Súper monitor 3000" data-nombre>
+          <label for="precio-producto" class="formulario__campo">Precio:</label>
+          <input type="text" id="precio-producto" class="formulario__input" placeholder="Ej: 40.00" data-precio>
+          <label for="imagen-producto" class="formulario__campo">Imagen (URL):</label>
+          <input type="text" id="imagen-producto" class="formulario__input" placeholder="Ej: https://i.postimg.cc/15jjT49m/mouse.webp" data-imagen>
+          <!--Información-->
+          <span class="formulario__info"><div class="signo">!</div> Debes llenar todos los campos</span>
+          <!--Botones del formulario-->
+          <div class="formulario__botones">
+            <button class="formulario__boton boton-enviar" id="boton-enviar" type="submit" disabled>Enviar</button>
+            <button class="formulario__boton boton-reset" type="reset">Limpiar</button>
+          </div>
+        </form>
+      </section>
     </main>
-
+    <!--Modal de confirmación para eliminar un producto-->
     <div id="modal-confirmacion" class="modal">
-        <div class="modal-contenido">
-            <h2>¿Estás seguro de que deseas eliminar este producto?</h2>
-            <button id="confirmar-eliminacion" class="btn-confirmar">Eliminar</button>
-            <button id="cancelar-eliminacion" class="btn-cancelar">Cancelar</button>
-        </div>
+      <div class="modal-contenido">
+        <h2>¿Estás seguro de que deseas eliminar este producto?</h2>
+        <!--Botones del modal-->
+        <button id="confirmar-eliminacion" class="btn-confirmar">Eliminar</button>
+        <button id="cancelar-eliminacion" class="btn-cancelar">Cancelar</button>
+      </div>
     </div>
-
+    <!--Footer-->
     <footer class="rodapie">
-        <div class="rodapie__logo">
-            <img class="logo__img" src="/img/logo.png" alt="Logo" height="65px">
-            <p class="logo__nombre">JeannStore</p>
-        </div>
-
-        <p class="rodapie__autor">Desarrollado por Jeannine Toro</p>
-
-        <p class="rodapie__empresa">ALURA LATAM - 2024</p>
+      <div class="rodapie__logo">
+        <!--Imagen del logo de la página-->
+        <img class="logo__img" src="/img/logo.png" alt="Logo" height="65px">
+        <!--Nombre de la página-->
+        <p class="logo__nombre">JeannStore</p>
+      </div>
+      <!--Nombre de la desarrolladora-->
+      <p class="rodapie__autor">Desarrollado por Jeannine Toro</p>
+      <!--Nombre de la empresa para quien fue desarrollado y el año-->
+      <p class="rodapie__empresa">ALURA LATAM - 2024</p>
     </footer>
-
+    <!--Lógica de la página-->
     <script type="module" src="/js/mostrarProductos.js"></script>
     <script type="module" src="/js/registrarProducto.js"></script>
     <script type="module" src="/js/buscarProducto.js"></script>
-</body>
+  </body>
 </html>
-
-
-<!-- {
-    "id": "1b8e",
-    "nombre": "prueba 2",
-    "precio": "34",
-    "imagen": "https://i.postimg.cc/PJ2nH72y/auriculares.webp"
-  },
-  {
-    "id": "a51b",
-    "nombre": "prueba 3",
-    "precio": "14,988.99",
-    "imagen": "https://i.postimg.cc/PJ2nH72y/auriculares.webp"
-  },
-  {
-    "id": "005c",
-    "nombre": "clic",
-    "precio": "40.00",
-    "imagen": "https://i.postimg.cc/PJ2nH72y/auriculares.webp"
-  },
-  {
-    "id": "5f7b",
-    "nombre": "GrayTone Air Pro",
-    "precio": "59.99",
-    "imagen": "https://i.postimg.cc/PJ2nH72y/auriculares.webp"
-  },
-  {
-    "id": "9633",
-    "nombre": "Reloj Talvox",
-    "precio": "17.84",
-    "imagen": "https://i.postimg.cc/K8gw6RXh/reloj.webp"
-  },
-  {
-    "id": "06d2",
-    "nombre": "PC Gamer",
-    "precio": "217.80",
-    "imagen": "https://i.postimg.cc/c4qXKX65/pc-gamer.webp"
-  },
-  {
-    "id": "9eae",
-    "nombre": "Reloj Suce",
-    "precio": "35.99",
-    "imagen": "https://i.postimg.cc/yNJ3sFsR/reloj-inteligente.webp"
-  },
-  {
-    "id": "ab6a",
-    "nombre": "Console Geek",
-    "precio": "650.89",
-    "imagen": "https://i.postimg.cc/j5t1jXWF/consola.webp"
-  },
-  {
-    "id": "22d0",
-    "nombre": "ClickZilla",
-    "precio": "28.74",
-    "imagen": "https://i.postimg.cc/15jjT49m/mouse.webp"
-  } -->
